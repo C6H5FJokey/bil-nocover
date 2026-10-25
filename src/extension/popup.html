@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bili NoCover</title>
     <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
   </head>
   <body>
     <main>
@@ -17,6 +18,14 @@
         <li>视频推荐、结束推荐与评论</li>
         <li>动态右侧推荐与评论入口</li>
       </ul>
+      <fieldset>
+        <legend>搜索结果</legend>
+        <label><input id="searchEnabled" type="checkbox"> 折叠疑似偏题结果</label>
+        <label><input id="hideSearchAds" type="checkbox"> 隐藏已识别的搜索推广</label>
+        <label><input id="guestSearch" type="checkbox"> 游客搜索</label>
+        <p class="note">游客搜索不发送搜索页和搜索接口的 Cookie。切换后刷新搜索页，其他页面的登录 Cookie 保留。仍可能出现偏题结果。</p>
+        <p id="settings-status" role="status" aria-live="polite"></p>
+      </fieldset>
       <nav aria-label="主动浏览">
         <a href="https://search.bilibili.com/" target="_blank" rel="noreferrer">主动搜索 ↗</a>
         <a href="https://t.bilibili.com/" target="_blank" rel="noreferrer">关注动态 ↗</a>

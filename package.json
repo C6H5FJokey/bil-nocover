@@ -1,13 +1,14 @@
 {
   "name": "bili-nocover",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
-  "description": "在页面渲染前隐藏哔哩哔哩推荐，并清除搜索框推荐占位词。",
+  "description": "提前隐藏哔哩哔哩推荐，清除推荐占位词，并提供可恢复的搜索结果筛选。",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:browser": "node scripts/browser-test.mjs"
+    "test:browser": "node scripts/browser-test.mjs",
+    "test:search": "node scripts/search-browser-test.mjs"
   },
   "engines": { "node": ">=20" },
   "devDependencies": { "playwright": "^1.56.1" }

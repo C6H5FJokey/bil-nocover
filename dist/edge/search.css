@@ -1,0 +1,20 @@
+/* Only search-page cards are gated. The timeout in search-filter.js releases
+   cards without metadata as "unknown", so missing information never erases them. */
+html[data-bnc-search="on"] .bili-video-card:not([data-bnc-state]),
+html[data-bnc-search="on"] .bili-video-card[data-bnc-state="pending"] {
+  visibility: hidden !important;
+}
+html[data-bnc-search="on"][data-bnc-filter="on"]:not([data-bnc-reveal="yes"]) [data-bnc-state="weak"],
+html[data-bnc-search="on"][data-bnc-filter="on"]:not([data-bnc-reveal="yes"]) [data-bnc-slot="weak"],
+html[data-bnc-search="on"][data-bnc-ads="hide"] [data-bnc-state="ad"],
+html[data-bnc-search="on"][data-bnc-ads="hide"] [data-bnc-slot="ad"] {
+  display: none !important;
+}
+.bnc-search-reason {
+  padding: 5px 8px !important;
+  margin: 4px 0 !important;
+  border-radius: 4px !important;
+  background: #edf4ee !important;
+  color: #31523b !important;
+  font: 12px/1.5 "Microsoft YaHei", sans-serif !important;
+}
