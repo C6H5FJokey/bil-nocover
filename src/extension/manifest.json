@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Bili NoCover · 免疫推荐",
+  "version": "0.1.1",
+  "description": "在页面渲染前隐藏哔哩哔哩推荐、热搜和评论，并清除搜索框推荐占位词。",
+  "action": {
+    "default_title": "Bili NoCover · 当前屏蔽范围",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.bilibili.com/*"],
+      "css": ["common.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://t.bilibili.com/*"],
+      "css": ["dynamic.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

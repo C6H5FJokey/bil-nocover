@@ -1,0 +1,19 @@
+:root { color-scheme: light dark; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+body { width: 320px; margin: 0; color: #263332; background: #f6f8f5; }
+main { padding: 24px; }
+.eyebrow { margin: 0 0 12px; color: #467264; font-size: 11px; letter-spacing: .14em; font-weight: 700; }
+h1 { margin: 0 0 18px; font-size: 23px; font-weight: 650; letter-spacing: -.03em; }
+p, li { font-size: 13px; line-height: 1.8; }
+ul { padding-left: 20px; margin: 12px 0 20px; }
+nav { display: flex; gap: 10px; }
+a { flex: 1; padding: 10px; border: 1px solid #cbd9d0; border-radius: 8px; color: #285e4c; text-align: center; text-decoration: none; font-size: 13px; }
+a:hover { background: #e5eee7; }
+a:focus-visible { outline: 2px solid #467264; outline-offset: 3px; }
+.note { margin: 18px 0 0; color: #64716b; font-size: 12px; }
+@media (prefers-color-scheme: dark) {
+  body { color: #e1e8e3; background: #19231f; }
+  .eyebrow, a { color: #a1d5bb; }
+  a { border-color: #40574b; }
+  a:hover { background: #293d32; }
+  .note { color: #adbbb2; }
+}
